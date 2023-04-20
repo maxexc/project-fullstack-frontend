@@ -3,39 +3,44 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const FooterBox = styled.footer`
-  background: #22252a;
+  background: ${props => props.theme.color.footer.bavkgroundFooter};
   padding-top: 28px;
   padding-bottom: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  @media ${theme.device.tablet} {
-    padding-right: 94px;
-    padding-left: 32px;
-  } ;
 `;
 
-export const BoxNav = styled.div`
+export const FlexBox = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 32px;
+  calc((100%) / 1);
+  margin-bottom: 44px;
 
-  margin-bottom: 32px;
-
+  
   @media ${theme.device.tablet} {
+    width: 100%;
+    justify-content: space-around;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 72px;
-  } ;
-`;
 
-export const BoxLogoDescription = styled.div``;
+    flex-wrap: wrap;
+  calc((100% - 32px) / 2);
+  gap: 32px;
+    margin-bottom: 38px;
+
+  };
+
+  //  @media screen and (min-width: 1281px) {
+  //   width: 100%;
+  //   justify-content: space-between;
+  //   flex-direction: row;
+
+  //   flex-wrap: nowrap;
+  // calc((100% - 64px) / 3);
+
+  // margin-bottom: 41px;
+  // };
+`;
 
 export const BoxLogo = styled.div`
   display: flex;
@@ -47,6 +52,12 @@ export const BoxLogo = styled.div`
     justify-content: start;
 
     margin-bottom: 24px;
+  }
+
+  @media ${theme.device.tablet} {
+    justify-content: start;
+
+    margin-bottom: 40px;
   } ;
 `;
 
@@ -73,10 +84,9 @@ export const TextLogo = styled.span`
 
 export const ListDescrition = styled.ul`
   display: none;
+  // list-style: inside;
 
   @media ${theme.device.tablet} {
-    padding-left: 16px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -86,7 +96,19 @@ export const ListDescrition = styled.ul`
     letter-spacing: -0.02em;
 
     color: #fafafa;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media ${theme.device.desktop} {
+    font-size: 18px;
+    line-height: 24px;
+    gap: 12px;
+
+    & > li:nth-child(2) > div {
+      display: flex;
+      flex-direction: column;
+    }
   } ;
 `;
 
@@ -110,30 +132,101 @@ export const NavList = styled.ul`
   color: #fafafa;
 
   @media ${theme.device.tablet} {
-    align-items: start;
-  } ;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1281px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media ${theme.device.desktop} {
+    align-items: center;
+    margin-left: 0;
+    gap: 24px;
+  }
+
+  li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: -0.02em;
+
+    color: #fafafa;
+    &:hover {
+      color: ${props => props.theme.color.footer.hoverLink};
+    }
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 `;
 
 export const BoxForm = styled.form`
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 8px;
 
-  margin-bottom: 44px;
-
   @media ${theme.device.tablet} {
     flex-direction: row;
     gap: 12px;
+  }
+
+  @media screen and (min-width: 1231px) {
+    flex-direction: column;
+    align-items: start;
+
+    gap: 12px;
+  }
+
+  @media ${theme.device.desktop} {
+    margin-left: 70px;
   } ;
+`;
+
+export const BoxTitle = styled.div`
+  display: none;
+
+  @media ${theme.device.desktop} {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+`;
+
+export const Title = styled.h2`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+
+  /* identical to box height */
+
+  color: #fafafa;
+`;
+export const Text = styled.h2`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* or 129% */
+  letter-spacing: -0.02em;
+
+  color: #fafafa;
 `;
 
 export const LabelForm = styled.label`
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 15px;
 `;
 
@@ -165,6 +258,9 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  width: 251px;
+  cursor: ${props => (!props.disabled ? 'pointer' : 'initial')};
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,23 +270,33 @@ export const Button = styled.button`
   line-height: 18px;
 
   color: #fff;
-  background: #8baa36;
+  background: ${props =>
+    !props.disabled
+      ? props.theme.color.footer.buttonBg
+      : props.theme.color.footer.buttonBgDisable};
 
-  width: 100%;
   padding: 11px 0;
 
   border: none;
   border-radius: 6px;
 
-  &:hover {
-    color: #000;
+  ${props =>
+    !props.disabled
+      ? `&:hover {color: ${props.theme.color.footer.hoverButtonText};
+    box-shadow: ${props.theme.color.footer.hoverBoxShadow};}`
+      : ''}
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media ${theme.device.tablet} {
+    width: 171px;
+  }
+
+  @media screen and (min-width: 1231px) {
+    width: 100%;
   }
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media ${theme.device.tablet} {
-    padding: 11px 51px;
-  } ;
 `;
 
 export const ListSocialNetworks = styled.ul`
@@ -200,4 +306,39 @@ export const ListSocialNetworks = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 16px;
+`;
+
+export const ImgSocial = styled.li`
+  svg {
+    fill: ${props => props.theme.color.footer.iconFill};
+
+    &:hover {
+      fill: ${props => props.theme.color.footer.hoverIconFill};
+    }
+  }
+`;
+
+export const BoxAfter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  gap: 14px;
+  padding: 28px 0;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+
+  letter-spacing: -0.01em;
+
+  color: ${props => props.theme.color.footer.textBottom};
+
+  opacity: 0.5;
+
+  @media ${theme.device.desktop} {
+    font-size: 14px;
+    line-height: 14px;
+  }
 `;

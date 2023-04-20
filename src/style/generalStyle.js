@@ -1,423 +1,254 @@
 export const theme = {
   device: {
-    mobail: 'screen and (min-width: 376px)',
-    tablet: 'screen and (min-width: 769px)',
-    desktop: 'screen and (min-width: 1441px)',
+    mobail: 'screen and (min-width: 375px)',
+    tablet: 'screen and (min-width: 768px)',
+    desktop: 'screen and (min-width: 1304px)',
   },
 
+  // ${props => props.theme.color.footer.bavkgroundFooter}
+
   dark: {
-    buttons: {
-      buttonSearch: {
-        padding: '50px 42px;',
+    color: {
+      primary: '#22252A',
+      secondary: '#8BAA36',
 
-        color: '#fff',
-        background: '#8BAA36',
+      // background
+      backgrounGlobal: '#1E1F28',
 
-        fontSize: '16px',
-        lineHeight: '24px',
+      header: {
+        headerDark: '#22252A',
+        headerContainer: '#1E1F28',
+        backgroun: '#1E1F28',
+        textNavigation: '#FAFAFA',
+        burgerBtn: '#FAFAFA',
+        modalBackground: '#2A2C36',
+        modalText: '#FAFAFA',
+        modaBorder: ' #8baa36',
 
-        clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-        border: 'none',
-
-        hoverBackground: '#22252A',
-        hoverColor: '#fff',
-
-        box: {
-          padding: '4px 4px',
-
-          background: '#8BAA36',
-
-          clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-
-          hoverBackground: '#22252A',
-        },
+        pageRecipe: '#23262A',
+        pageRecipeScroll: '#fff',
       },
 
-      buttonOtherCategories: {
-        padding: '20px 52px',
+      mainPage: {
+        mpHeroTitle: '#FAFAFA',
+        mpHeroText: '#FAFAFA',
+        mpHeroProductColor: '#FAFAFA',
+        mpHeroProductBackground: '#2A2C36',
+        recipeCategoryName: '#FAFAFA',
+        mpButton: '#FAFAFA',
+        searchBtn: '#8BAA36',
+        searchBtnFocus: '#fafafa',
+        searchInputBorder: 'rgba(250, 250, 250, 0.5)',
+        searchInputHover: 'rgba(250, 250, 250)',
+        searchInputBG: '#1E1F28',
+        searchInputColor: '#FAFAFA',
+        searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
+        searchBtncolorFocus: '#22252A',
+        searchBtnFocusSearch: '#ECECEC',
+      },
+      dishCard: { dishTitleWrapper: '#2A2C36', dishTitle: '#FAFAFA' },
+      searchPage: {
+        searchTypeSpan: '#FAFAFA',
+        customSelectBG: 'transparent',
+        customSelectColor: '#FAFAFA',
+        reactSelectMenuList: '#8BAA36',
+        reactSelectOptionColor: 'rgba(250, 250, 250, 0.5)',
+        reactSelectOptionHover: 'rgba(250, 250, 250)',
+        SRLNoItemsText: '#FAFAFA',
+        //-------------
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
 
-        color: '#fff',
-        background: 'transparent',
-
-        fontSize: '16px',
-        lineHeight: '24px',
-
-        clipPath: 'none',
-        border: '3px solid rgb(139, 170, 54)',
-        borderRadius: '24px 44px',
-
-        hoverBackground: '#8BAA36',
-        hoverColor: '#fff',
-
-        box: {
-          padding: '4px 4px',
-
-          background: 'transparent',
-
-          clipPath: 'none',
-
-          hoverBackground: 'transparent',
-        },
+        // reactSelectOptionColorBG: 'transparent',
+      },
+      mainPageTitle: {
+        colorTitle: '#FAFAFA',
       },
 
-      buttonSingIn: {
-        padding: '12px 24px',
-
-        color: '#fff',
-        background: 'transparent',
-
-        fontSize: '16px',
-        lineHeight: '24px',
-
-        clipPath: 'none',
-        border: '3px solid rgb(250, 250, 250)',
-        borderRadius: '24px 44px',
-
-        hoverBackground: 'transparent',
-        hoverColor: '#8BAA36',
-        hoverBorderColor: '#8BAA36',
-
-        tablet: {
-          padding: '22px 44px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        box: {
-          padding: '4px 4px',
-
-          background: 'transparent',
-
-          clipPath: 'none',
-
-          hoverBackground: 'transparent',
-        },
+      favorit: {
+        cardWrapper: '#2A2C36',
+        cardTitle: '#FAFAFA',
+        cardDescription: 'rgba(250, 250, 250, 0.6)',
+        cardTime: '#FAFAFA',
+        cardButtonSee: '#8BAA36',
+        cardButtonSeeBorder: '#8BAA36',
+        cardButtonSeeHover: '#22252A',
+        cardButtonDelete: '#1E1F28',
+        cardButtonDeleteHoverBackground: '#EBF3D4',
+        cardButtonDeleteBorder: '#1E1F28',
+        cardIconStroke: '#fafafa',
+        cardIconStrokeHover: '#22252a',
+        cardIconFill: '#1E1F28',
+        cardIconFillHover: '#EBF3D4',
+        pagination: '#ebf3d4',
+        paginationHover: '#8BAA36',
       },
 
-      buttonRegistration: {
-        padding: '12px 24px;',
-
-        color: '#fff',
-        background: '#8BAA36',
-
-        fontSize: '14px',
-        lineHeight: '21px',
-
-        clipPath: 'none',
-        border: '3px solid #8BAA36',
-        borderRadius: '24px 44px',
-
-        hoverBackground: 'transparent',
-        hoverColor: '#8BAA36',
-
-        tablet: {
-          padding: '22px 44px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        box: {
-          padding: '4px 4px',
-
-          background: 'transparent',
-
-          clipPath: 'none',
-
-          hoverBackground: 'transparent',
-        },
+      shoppingList: {
+        colorImageContainer: '#2A2C36',
+        borderItemContainer: 'rgba(250, 250, 250, 0.3)',
+        titleProduct: '#FAFAFA',
+        strokeRemoveSvg: '#FAFAFA',
+        ImgIngradientsText: ' #FAFAFA',
       },
 
-      buttonLogOutClipPath: {
-        padding: '50px 42px;',
+      footer: {
+        bavkgroundFooter: '#8BAA36',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#1E1F28',
 
-        color: '#fff',
-        background: '#8BAA36',
+        hoverLink: '#1E1F28',
+        hoverButtonText: '#8BAA36',
+        hoverBoxShadow: '10px 10px 43px -14px rgba(34,37,42,0.75)',
 
-        fontSize: '16px',
-        lineHeight: '24px',
+        iconFill: '#ffffff',
+        hoverIconFill: '#1E1F28',
 
-        clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-        border: 'none',
+        textBottom: '#FAFAFA',
+      },
 
-        hoverBackground: '#22252A',
-        hoverColor: '#8BAA36',
+      addResipe: {
+        inputColor: '#FAFAFA',
+        optionMenuColor: '#8BAA36',
+        optionSelectHover: '#FFFFFF',
+        titleColor: '#FAFAFA',
+        ingridientsCounter: '#FFFFFF',
+        simbolColor: '#FFFFFF',
+        ingridientsBackground: 'transparent',
+        ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
+        ingridientsOpasity: '1',
+        ingridientsInputColor: '#D9D9D9',
+        ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
+        addButton: '#8BAA36',
+      },
 
-        box: {
-          padding: '4px 4px',
-
-          background: '#8BAA36',
-
-          clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-
-          hoverBackground: '#8BAA36',
-        },
+      recipePage: {
+        backgrounRecipeItem: '#2A2C36',
+        ingName: '#FAFAFA',
+        instructionTitle: '#FAFAFA',
+        instructionText: '#FAFAFA',
+        instructionScrollbarThumb: '#EBF3D4',
       },
     },
   },
 
   white: {
-    buttons: {
-      buttonSearchStart: {
-        padding: '15px 31px',
+    color: {
+      primary: '#8BAA36',
+      secondary: '#22252A',
 
-        color: '#fff',
-        background: '#22252A',
+      // background
+      backgrounGlobal: '#FFFFFF',
 
-        fontSize: '14px',
-        lineHeight: '21px',
+      header: {
+        headerContainer: 'rgb(255, 255, 255)',
+        backgroun: '#FAFAFA',
+        textNavigation: '#23262A',
+        burgerBtn: '#22252A',
+        modalBackground: '#fafafa',
+        modalText: '#23262A',
+        modaBorder: ' #FAFAFA',
 
-        clipPath: 'none',
-        border: '3px solid #22252A',
-        borderRadius: '24px 44px',
-
-        hoverBackground: '#8BAA36',
-        hoverColor: '#fff',
-        hoverBorderColor: '#8BAA36',
-
-        tablet: {
-          padding: '18px 52px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        // box: {
-        //   padding: '4px 4px',
-
-        //   background: '#22252A',
-
-        //   clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-
-        //   hoverBackground: '#8BAA36',
-        // },
+        pageRecipe: '#23262A',
+        pageRecipeScroll: '#23262A',
       },
 
-      buttonSearch: {
-        padding: '15px 31px',
-
-        color: '#fff',
-        background: '#8BAA36',
-
-        fontSize: '14px',
-        lineHeight: '21px',
-
-        // clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-        border: '3px solid #8BAA36',
-        borderRadius: '24px 44px',
-
-        hoverBackground: '#22252A',
-        hoverColor: '#fff',
-        hoverBorderColor: '#22252A',
-
-        tablet: {
-          padding: '16px 52px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        // box: {
-        //   padding: '4px 4px',
-
-        //   background: '#8BAA36',
-
-        //   clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-
-        //   hoverBackground: '#22252A',
-        // },
+      mainPage: {
+        mpHeroTitle: '#22252a',
+        mpHeroText: '#23262a',
+        mpHeroProductColor: '#3E4462',
+        mpHeroProductBackground: '#ffffff',
+        recipeCategoryName: '#001833',
+        mpButton: '#22252a',
+        searchBtn: '#22252A',
+        searchBtnFocus: '#8BAA36',
+        searchInputBorder: '#F0F0F0',
+        searchInputHover: '#dfdfdf',
+        searchInputBG: '#fafafa',
+        searchInputColor: '#23262A',
+        searchInputPlaceholder: '#BDBDBD',
+        searchBtncolorFocus: '#fafafa',
+        searchBtnFocusSearch: '#22252A',
+      },
+      dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
+      searchPage: {
+        searchTypeSpan: '#001833',
+        customSelectBG: '#ececec', //#D9D9D9
+        customSelectColor: '#000000',
+        reactSelectMenuList: '#FAFAFA',
+        reactSelectOptionColor: 'rgba(0, 0, 0, 0.5)',
+        reactSelectOptionHover: '#000000',
+        //-------------
+        SRLNoItemsText: '#000000',
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
+        // reactSelectOptionColorBG: 'transparent',
       },
 
-      buttonOtherCategories: {
-        padding: '14px 32px',
-
-        color: '#000',
-        background: 'transparent',
-
-        fontSize: '14px',
-        lineHeight: '21px',
-
-        clipPath: 'none',
-        border: '3px solid rgb(139, 170, 54)',
-        borderRadius: '24px 44px',
-
-        hoverBackground: '#8BAA36',
-        hoverColor: '#fff',
-
-        tablet: {
-          padding: '20px 52px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        // box: {
-        //   padding: '4px 4px',
-
-        //   background: 'transparent',
-
-        //   clipPath: 'none',
-
-        //   hoverBackground: 'transparent',
-        // },
+      mainPageTitle: {
+        colorTitle: '#001833',
       },
 
-      buttonSingIn: {
-        padding: '12px 24px',
-
-        color: '#fff',
-        background: 'transparent',
-
-        fontSize: '14px',
-        lineHeight: '21px',
-
-        clipPath: 'none',
-        border: '3px solid rgb(250, 250, 250)',
-        borderRadius: '24px 44px',
-
-        hoverBackground: 'transparent',
-        hoverColor: '#8BAA36',
-        hoverBorderColor: '#8BAA36',
-
-        tablet: {
-          padding: '22px 44px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        box: {
-          padding: '4px 4px',
-
-          background: 'transparent',
-
-          clipPath: 'none',
-
-          hoverBackground: 'transparent',
-        },
+      favorit: {
+        cardWrapper: '#FFFFFF',
+        cardTitle: '#3e4462',
+        cardDescription: '#23262A',
+        cardTime: '#3e4462',
+        cardButtonSee: '#22252A',
+        cardButtonSeeBorder: 'rgb(250, 250, 250)',
+        cardButtonSeeHover: '#8BAA36',
+        cardButtonDelete: '#ebf3d4',
+        cardButtonDeleteHoverBackground: '#1e1f28',
+        cardButtonDeleteBorder: '#EBF3D4',
+        cardIconStroke: '#22252a',
+        cardIconStrokeHover: '#fafafa',
+        cardIconFill: '#ebf3d4',
+        cardIconFillHover: '#22252a',
+        pagination: '#8BAA36',
+        paginationHover: '#ebf3d4',
       },
 
-      buttonRegistration: {
-        padding: '12px 24px;',
+      shoppingList: {
+        colorImageContainer: '#EBF3D4',
+        borderItemContainer: '#e0e0e0',
+        titleProduct: '#3e4462',
+        strokeRemoveSvg: '#333333',
+      },
+      footer: {
+        bavkgroundFooter: '#22252A',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#8baa36',
 
-        color: '#fff',
-        background: '#8BAA36',
+        hoverLink: '#8BAA36',
+        hoverButtonText: '#22252A',
+        hoverBoxShadow: '10px 10px 43px -14px rgba(139,170,54,0.75)',
 
-        fontSize: '14px',
-        lineHeight: '21px',
+        iconFill: '#8baa36',
+        hoverIconFill: '#ffffff',
 
-        clipPath: 'none',
-        border: '3px solid #8BAA36',
-        borderRadius: '24px 44px',
-
-        hoverBackground: 'transparent',
-        hoverColor: '#8BAA36',
-
-        tablet: {
-          padding: '22px 44px',
-
-          fontSize: '16px',
-          lineHeight: '24px',
-        },
-
-        box: {
-          padding: '4px 4px',
-
-          background: 'transparent',
-
-          clipPath: 'none',
-
-          hoverBackground: 'transparent',
-        },
+        textBottom: '#22252A',
+      },
+      addResipe: {
+        inputColor: '#000000',
+        optionMenuColor: 'transperent',
+        optionSelectHover: '#8baa36',
+        titleColor: '#3E4462',
+        ingridientsCounter: 'rgba(51, 51, 51)',
+        simbolColor: 'rgba(51, 51, 51, 0.3)',
+        ingridientsBackground: '#f5f5f5',
+        ingredientsBorder: '#f5f5f5',
+        ingridientsOpasity: '0,5',
+        ingridientsInputColor: '#000000',
+        ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
+        addButton: '#22252A',
       },
 
-      buttonLogOutClipPath: {
-        padding: '12px 24px;',
-
-        color: '#fff',
-        background: '#8BAA36',
-
-        fontSize: '14px',
-        lineHeight: '21px',
-
-        // clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-        border: '3px solid #8BAA36',
-        borderRadius: '24px 44px',
-
-        hoverBackground: '#22252A',
-        hoverColor: '#fff',
-
-        tablet: {
-          padding: '12px 32px',
-
-          fontSize: '14px',
-          lineHeight: '21px',
-        },
-
-        // box: {
-        //   padding: '4px 4px',
-
-        //   background: '#8BAA36',
-
-        //   clipPath: 'inset(25% 0 25% 0 round 15% 35% 15% 30%)',
-
-        //   hoverBackground: '#8BAA36',
-        // },
-      },
-
-      buttonSecondaryWidth: {
-        width: '100%',
-        padding: '11px 0',
-
-        background: '#8BAA36',
-        color: '#fff',
-
-        border: 'none',
-        borderRadius: '6px',
-
-        fontSize: '14px',
-        lineHeight: '18px',
-
-        hoverBackground: '#1E1F28',
-        hoverColor: '#fff',
-        hoverBorder: 'none',
-      },
-
-      buttonSecondaryWidthWhite: {
-        width: '100%',
-        padding: '11px 0',
-
-        background: '#D9D9D9',
-        color: '#23262A',
-
-        border: 'none',
-        borderRadius: '6px',
-
-        fontSize: '14px',
-        lineHeight: '16px',
-
-        hoverBackground: 'transparent',
-        hoverColor: '#23262A',
-        hoverBorder: '1px solid #23262A',
-      },
-
-      buttonSecondarySeeAll: {
-        width: 'auto',
-        padding: '10px 24px',
-
-        background: '#8BAA36',
-        color: '#fff',
-
-        border: 'none',
-        borderRadius: '6px',
-
-        fontSize: '14px',
-        lineHeight: '16px',
-
-        hoverBackground: '#1E1F28',
-        hoverColor: '#fff',
-        hoverBorder: 'none',
+      recipePage: {
+        backgrounRecipeItem: '#ebf3d4',
+        ingName: '#3E4462',
+        instructionTitle: '#3E4462',
+        instructionText: '#3E4462',
+        instructionScrollbarThumb: '#22252a',
       },
     },
   },

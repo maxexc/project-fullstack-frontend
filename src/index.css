@@ -1,10 +1,14 @@
 @import-normalize; /* bring in normalize.css styles */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   /* background: #124212; */
 }
 
@@ -31,4 +35,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }

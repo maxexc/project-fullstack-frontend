@@ -7,7 +7,7 @@ export const Box = styled.div`
   background: ${props => props.theme.buttons[props.value].box.background};
 
   clip-path: ${props => props.theme.buttons[props.value].box.clipPath};
-
+  border-color: ${props => props.theme.colorBorder}
   &:hover {
     background: ${props =>
       props.theme.buttons[props.value].box.hoverBackground};

@@ -1,14 +1,22 @@
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
 import { App } from 'components/App';
 import './index.css';
-import theme from './style/generalStyle';
+
+import { store, persistor } from './redux/store';
+import { Loader } from 'components/Loader/Loader';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme.white}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate loading={<Loader />} persistor={persistor}>
+        <BrowserRouter basename="/project-fullstack-frontend">
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
