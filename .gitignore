@@ -15,6 +15,14 @@
 # production
 /build
 
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
 # misc
 package-lock.json
 .DS_Store
